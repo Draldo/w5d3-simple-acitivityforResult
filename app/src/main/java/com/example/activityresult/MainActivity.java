@@ -37,8 +37,10 @@ public class MainActivity extends AppCompatActivity {
                 if (cursor != null) {
                     cursor.moveToFirst();
                     String name = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+                    String phone = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
 
                     Log.d(TAG, "onActivityResult: " + name);
+                    Log.d(TAG, "onActivityResult: " + phone);
 
                     cursor.close();
                 }
